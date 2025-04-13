@@ -79,7 +79,7 @@
         android:id="@+id/regSend"
         android:layout_width="253dp"
         android:layout_height="66dp"
-        android:text="@string/regisztr_l_s"
+        android:text="Bejelentkezés"
         android:textColor="@android:color/white"
         android:onClick="loginIn"
         android:backgroundTint="#000000"
