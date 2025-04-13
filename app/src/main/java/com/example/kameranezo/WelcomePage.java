@@ -1,6 +1,8 @@
 package com.example.kameranezo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,5 +63,9 @@ public class WelcomePage extends AppCompatActivity {
         } else {
             Toast.makeText(WelcomePage.this, "Nincs bejelentkezett felhasználó.", Toast.LENGTH_SHORT).show();
         }
+    }
+    public void openMenu(View view) {
+
+        startActivity(new Intent(this , MenuActivity.class));
     }
 }
