@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="k_zter_leti_kamera_stream_alkalmaz_s">Közterületi kamera stream alkalmazás</string>
+    <string name="k_sz_tette_simon_istv_n_rb7cbx">Készítette: Simon István (RB7CBX)</string>
+    <string name="bejelentkez_s">Bejelentkezés</string>
+    <string name="regisztr_ci">Regisztráció</string>
+    <string name="e_mail_c_m">E-mail cím:</string>
+    <string name="regisztgomb">Regisztráció</string>
+</resources>

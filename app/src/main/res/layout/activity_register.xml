@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcomeTitle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/titleReg"
+        android:layout_width="246dp"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:text="@string/regisztgomb"
+        android:background="@drawable/rounded_textbox"
+        android:textAllCaps="true"
+        android:textColor="#404040"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/useraName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_textbox"
+        android:gravity="center"
+        android:text="@string/e_mail_c_m"
+        android:textAllCaps="false"
+        android:textColor="#404040"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/remail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleReg"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/remail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Email:"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/useraName"
+        app:layout_constraintBottom_toTopOf="@+id/rname"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_textbox"
+        android:gravity="center"
+        android:text="@string/n_v"
+        android:textAllCaps="false"
+        android:textColor="#404040"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/rname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remail"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/rname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Név:"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintBottom_toTopOf="@+id/rpassword"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"/>
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_textbox"
+        android:gravity="center"
+        android:text="@string/jelsz"
+        android:textAllCaps="false"
+        android:textColor="#404040"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/rpassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rname"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/rpassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Jelszó:"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintBottom_toTopOf="@+id/regSend"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/regSend"
+        android:layout_width="253dp"
+        android:layout_height="66dp"
+        android:text="@string/regisztr_l_s"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#000000"
+        style="@style/Widget.Material3.Button"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83"
+        android:onClick="sendReg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

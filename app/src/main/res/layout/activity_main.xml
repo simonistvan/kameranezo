@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/EditTextUsername"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#404040">
+
+    <TextView
+        android:id="@+id/mainTitleApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:orientation="vertical"
+        android:text="@string/k_zter_leti_kamera_stream_alkalmaz_s"
+        android:background="@drawable/rounded_textbox"
+        android:textAllCaps="true"
+        android:textColor="#404040"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13999999"
+        app:layout_constraintWidth_percent="0.5"
+        tools:ignore="MissingConstraints"
+        android:gravity="center"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/madeBy"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="Animation-1744452629615.json"
+        app:lottie_loop="true"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/madeBy"
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:text="@string/k_sz_tette_simon_istv_n_rb7cbx"
+        android:background="@drawable/rounded_textbox"
+        android:textColor="#404040"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitleApp"
+        app:layout_constraintVertical_bias="0.100000024"
+        tools:ignore="MissingConstraints"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:gravity="center"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        android:layout_width="308dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:onClick="login"
+        style="@style/Widget.Material3.Button"
+        android:layout_gravity="center"
+        android:backgroundTint="#000000"
+        android:text="@string/bejelentkez_s"
+        android:textColor="@android:color/white"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/madeBy"
+        app:layout_constraintVertical_bias="0.63"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signupButton"
+        android:layout_width="308dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:onClick="register"
+        style="@style/Widget.Material3.Button"
+        android:layout_gravity="center"
+        android:backgroundTint="#000000"
+        android:text="@string/regisztr_ci"
+        android:textColor="@android:color/white"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton"
+        app:layout_constraintVertical_bias="0.32999998"
+        tools:ignore="MissingConstraints" />
+    <!--    <Button-->
+<!--        android:id="@+id/signupButton"-->
+<!--        android:layout_width="308dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="register"-->
+<!--        android:orientation="vertical"-->
+<!--        android:text="@string/regisztr_ci"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textSize="15sp"-->
+<!--        android:background="@drawable/rounded_black_button"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/loginButton"-->
+<!--        app:layout_constraintVertical_bias="0.32999998"-->
+<!--        tools:ignore="MissingConstraints" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>
