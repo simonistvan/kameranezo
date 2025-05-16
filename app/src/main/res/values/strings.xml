@@ -10,4 +10,18 @@
     <string name="regisztr_l_s">Regisztrálás!</string>
     <string name="jelsz">Jelszó:</string>
     <string name="bejelentkez_ss">Bejelentkezés</string>
+    <string name="profil">Profil</string>
+    <string name="jelsz_jra">Jelszó újra</string>
+    <string name="jelszo">Jelszó</string>
+    <string name="jelsz_friss_t_se">Jelszó frissítése</string>
+    <string name="profil_szerkeszt_se">Profil szerkesztése</string>
+    <string name="kamer_k_megtekint_se">Kamerák megtekintése</string>
+    <string name="profil_szerkeszt_se2">Profil szerkesztése</string>
+    <string name="j_jelsz">Új jelszó</string>
+    <string name="jelszofrissit">Jelszó frissítése</string>
+    <string name="profil_szerkeszt_s">Profil szerkesztés</string>
+    <string name="r_gi_jelsz">Régi jelszó</string>
+    <string name="uj_jelsz">Új jelszó</string>
+    <string name="j_jelsz_jra">Új jelszó újra</string>
+    <string name="profil_friss_t_se">Profil frissítése</string>
 </resources>

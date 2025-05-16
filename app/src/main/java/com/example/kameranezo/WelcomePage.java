@@ -28,7 +28,7 @@ public class WelcomePage extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_page);
 
         mAuth = FirebaseAuth.getInstance();
-        welcomeText = findViewById(R.id.textView);  // A TextView, ahová kiírjuk a felhasználó nevét
+        welcomeText = findViewById(R.id.profilTitle);  // A TextView, ahová kiírjuk a felhasználó nevét
 
         // Rendszer bár ablakok betöltése
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.welcomeTitle), (v, insets) -> {
@@ -51,7 +51,6 @@ public class WelcomePage extends AppCompatActivity {
                     .addOnSuccessListener(documentSnapshot -> {
                         if (documentSnapshot.exists()) {
                             String name = documentSnapshot.getString("name");
-                            // Itt kiírjuk a TextView-ba az adatot
                             welcomeText.setText("Üdvözlünk, " + name + "!");
                         } else {
                             Toast.makeText(WelcomePage.this, "A felhasználói adatok nem találhatók.", Toast.LENGTH_SHORT).show();
@@ -64,8 +63,12 @@ public class WelcomePage extends AppCompatActivity {
             Toast.makeText(WelcomePage.this, "Nincs bejelentkezett felhasználó.", Toast.LENGTH_SHORT).show();
         }
     }
-    public void openMenu(View view) {
+    public void openMenua(View view) {
 
         startActivity(new Intent(this , MenuActivity.class));
+    }
+
+    public void openProfile(View view) {
+        startActivity(new Intent(this, Profile.class));
     }
 }

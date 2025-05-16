@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:background="@drawable/background">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="308dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="84dp"
+        android:backgroundTint="#000000"
+        android:gravity="center"
+        android:onClick="passwordChange"
+        android:textColor="@android:color/white"
+        app:cornerRadius="30dp"
+        android:text="@string/profil_friss_t_se"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,OnClick,UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/profilTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_textbox"
+        android:text="@string/profil_szerkeszt_s"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/regijelszoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_textbox"
+        android:text="@string/r_gi_jelsz"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilTitle"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_textbox"
+        android:text="@string/uj_jelsz"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/ujJelszoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_textbox"
+        android:text="@string/j_jelsz_jra"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/regijelszo"
+        android:layout_width="315dp"
+        android:layout_height="51dp"
+        android:layout_marginHorizontal="50sp"
+        android:autofillHints="Régi Jelszó"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regijelszoTitle"
+        tools:ignore="LabelFor, MissingConstraints" />
+
+    <EditText
+        android:id="@+id/ujJelszo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50sp"
+        android:layout_marginStart="8dp"
+        android:autofillHints="Új jelszó"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/ujJelszoTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.493"
+        tools:ignore="LabelFor, MissingConstraints" />
+
+    <EditText
+        android:id="@+id/ujjelszo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50sp"
+        android:autofillHints="Régi Jelszó Újra"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ujJelszoTitle"
+        tools:ignore="LabelFor, MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,13 +12,21 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class LoginActivity extends AppCompatActivity {
+
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
+
+        auth = FirebaseAuth.getInstance();
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.welcomeTitle), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -27,27 +35,28 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void loginIn(View view) {
-        // EditText mezők kiolvasása
-        EditText usernameEditText = findViewById(R.id.editText); // Felhasználónév mező
-        EditText passwordEditText = findViewById(R.id.editTextTextPassword); // Jelszó mező
+        EditText usernameEditText = findViewById(R.id.jelszoupdate2);
+        EditText passwordEditText = findViewById(R.id.editTextTextPassword);
 
-        String username = usernameEditText.getText().toString().trim();
+        String email = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
 
-        // Ezt itt természetesen ki kell cserélni egy valódi bejelentkezési logikával
-        if (!username.isEmpty() && !password.isEmpty()) {
-            // Feltételezve, hogy a bejelentkezés sikeres:
-
-            // Üzenet a sikeres bejelentkezésről
-            Toast.makeText(this, "Bejelentkezés sikeres!", Toast.LENGTH_SHORT).show();
-
-            // Irányítás egy másik Activity-re
-            Intent intent = new Intent(LoginActivity.this, WelcomePage.class); // Itt cseréld le a TargetActivity-t a kívánt Activity-re
-            startActivity(intent);
-            finish(); // Ez bezárja a bejelentkezési Activity-t
-        } else {
-            // Ha a mezők üresek, akkor hibaüzenet
+        if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Kérjük, töltse ki a felhasználónevet és a jelszót.", Toast.LENGTH_SHORT).show();
+            return;
         }
+
+        auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = auth.getCurrentUser();
+                        Toast.makeText(this, "Bejelentkezés sikeres!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, WelcomePage.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        Toast.makeText(this, "Hibás felhasználónév vagy jelszó!", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

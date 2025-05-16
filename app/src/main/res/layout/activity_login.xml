@@ -25,7 +25,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/jelszoupdate2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50sp"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/jelszoupdate2" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
