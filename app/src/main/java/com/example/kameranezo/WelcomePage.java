@@ -65,10 +65,14 @@ public class WelcomePage extends AppCompatActivity {
     }
     public void openMenua(View view) {
 
-        startActivity(new Intent(this , MenuActivity.class));
+        startActivity(new Intent(this , CameraList.class));
     }
 
     public void openProfile(View view) {
         startActivity(new Intent(this, Profile.class));
+    }
+
+    public void openMenu(View view) {
+        startActivity(new Intent(this, CameraList.class));
     }
 }

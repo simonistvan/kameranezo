@@ -34,15 +34,22 @@ android {
 
 dependencies {
 
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation("com.google.firebase:firebase-auth:21.1.0")
     implementation("com.google.firebase:firebase-firestore:24.9.1")
-    implementation ("com.airbnb.android:lottie:5.0.3")
+    implementation("com.airbnb.android:lottie:5.0.3")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
+    implementation("com.google.android.exoplayer:exoplayer:2.19.0")
+
+    implementation("androidx.recyclerview:recyclerview:1.3.0")
+
 }

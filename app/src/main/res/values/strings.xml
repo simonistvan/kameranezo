@@ -24,4 +24,7 @@
     <string name="uj_jelsz">Új jelszó</string>
     <string name="j_jelsz_jra">Új jelszó újra</string>
     <string name="profil_friss_t_se">Profil frissítése</string>
+    <string name="kamera_men">Kamera Menü</string>
+    <string name="kamera_k_p">Kamera kép</string>
+    <string name="kamera_k_pE">Kamera kép</string>
 </resources>

@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/profilTitle"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="Animation - 1747418769953"
+        app:lottie_fileName="Animation-1747418769953.json"
         tools:ignore="MissingConstraints" />
 
 
