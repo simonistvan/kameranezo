@@ -75,4 +75,8 @@ public class WelcomePage extends AppCompatActivity {
     public void openMenu(View view) {
         startActivity(new Intent(this, CameraList.class));
     }
+
+    public void namechanging(View view) {
+        startActivity(new Intent(this, NameChanger.class));
+    }
 }

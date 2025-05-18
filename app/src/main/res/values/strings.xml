@@ -27,4 +27,6 @@
     <string name="kamera_men">Kamera Menü</string>
     <string name="kamera_k_p">Kamera kép</string>
     <string name="kamera_k_pE">Kamera kép</string>
+    <string name="n_v_v_ltoztat_s">Név változtatás</string>
+    <string name="j_n_v">Új név</string>
 </resources>

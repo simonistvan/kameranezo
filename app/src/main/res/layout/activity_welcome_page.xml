@@ -36,23 +36,40 @@
         app:layout_constraintBottom_toTopOf="@+id/openMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/profilTitle"
+        app:layout_constraintVertical_bias="0.96" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/namechanger"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="253dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#000000"
+        android:onClick="namechanging"
+        android:text="@string/n_v_v_ltoztat_s"
+        android:textColor="@android:color/white"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/openMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/openMenu"
+        style="@style/Widget.Material3.Button"
         android:layout_width="253dp"
         android:layout_height="66dp"
+        android:backgroundTint="#000000"
+        android:onClick="openMenu"
         android:text="@string/kamer_k_megtekint_se"
         android:textColor="@android:color/white"
-        android:backgroundTint="#000000"
-        style="@style/Widget.Material3.Button"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83"
-        android:onClick="openMenu" />
+        app:layout_constraintVertical_bias="0.929" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieView"

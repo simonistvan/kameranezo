@@ -40,7 +40,6 @@ public class CameraAdapter extends RecyclerView.Adapter<CameraAdapter.CameraView
         holder.tvNev.setText(camera.getNev());
         holder.tvCim.setText(camera.getCim());
 
-        // ExoPlayer setup
         ExoPlayer player = new ExoPlayer.Builder(context).build();
         holder.playerView.setPlayer(player);
         MediaItem mediaItem = MediaItem.fromUri(camera.getKepUrl());
