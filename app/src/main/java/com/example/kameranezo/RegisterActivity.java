@@ -86,12 +86,12 @@ public class RegisterActivity extends AppCompatActivity {
                             Map<String, Object> userData = new HashMap<>();
                             userData.put("name", name);
                             userData.put("email", email);
-                            userData.put("favorites", new ArrayList<Integer>());  // Lista helyett tömb
+                            userData.put("favorites", new ArrayList<Integer>());
 
                             if (user != null) {
                                 db.collection("users")
                                         .document(user.getUid())
-                                        .set(userData, SetOptions.merge())  // merge() hozzáadása, hogy ne írja felül a többi adatot
+                                        .set(userData, SetOptions.merge())
                                         .addOnSuccessListener(aVoid -> {
                                             Toast.makeText(RegisterActivity.this, "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
                                             startActivity(new Intent(RegisterActivity.this, MainActivity.class));

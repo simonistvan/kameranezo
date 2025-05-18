@@ -1,4 +1,4 @@
-package com.example.kameranezo.model;
+package com.example.kameranezo;
 
 import com.google.firebase.firestore.PropertyName;
 
@@ -9,7 +9,7 @@ public class Camera {
     @PropertyName("link")
     private String kepUrl;
 
-    public Camera() {} // Kell az üres konstruktor Firestore-hoz
+    public Camera() {}
 
     public String getNev() {
         return nev;

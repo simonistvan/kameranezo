@@ -58,7 +58,7 @@ public class Profile extends AppCompatActivity {
                     user.updatePassword(ujJelszo1).addOnCompleteListener(updateTask -> {
                         if (updateTask.isSuccessful()) {
                             Toast.makeText(this, "Jelszó sikeresen frissítve!", Toast.LENGTH_SHORT).show();
-                            sendPasswordChangedNotification();  // Értesítés küldése
+                            sendPasswordChangedNotification();
                         } else {
                             Toast.makeText(this, "Hiba a jelszó frissítésekor!", Toast.LENGTH_SHORT).show();
                         }
@@ -71,7 +71,7 @@ public class Profile extends AppCompatActivity {
     }
 
     private void sendPasswordChangedNotification() {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) { // API 33+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
             if (checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(new String[]{android.Manifest.permission.POST_NOTIFICATIONS}, NOTIFICATION_PERMISSION_REQUEST_CODE);
                 return;

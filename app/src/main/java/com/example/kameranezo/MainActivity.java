@@ -23,10 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
         lottieAnimationView = findViewById(R.id.lottieAnimationView);
 
-        lottieAnimationView.setAnimation("Animation-1744452629615.json");  // Az animáció nevét itt add meg
-        lottieAnimationView.playAnimation(); // Animáció lejátszása
+        lottieAnimationView.setAnimation("Animation-1744452629615.json");
+        lottieAnimationView.playAnimation();
 
-        // Apply window insets to the root view
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.EditTextUsername), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

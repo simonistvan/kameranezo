@@ -1,6 +1,6 @@
 package com.example.kameranezo;
 
-import android.content.Intent; // Add hozzá az Intent importálását
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;

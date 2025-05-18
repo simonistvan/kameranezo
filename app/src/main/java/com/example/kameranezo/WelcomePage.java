@@ -28,7 +28,7 @@ public class WelcomePage extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_page);
 
         mAuth = FirebaseAuth.getInstance();
-        welcomeText = findViewById(R.id.profilTitle);  // A TextView, ahová kiírjuk a felhasználó nevét
+        welcomeText = findViewById(R.id.profilTitle);
 
         // Rendszer bár ablakok betöltése
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.welcomeTitle), (v, insets) -> {
